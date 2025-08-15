@@ -7,8 +7,9 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Loader from './components/Loader';
 import EnterScreen from './components/EnterScreen';
-import Footer from './components/Footer'; 
+import Footer from './components/Footer';
 import Skills from './components/Skills';
+import OmniAgent from './components/OmniAgent'; // ✅ Import the AI widget
 
 function App() {
   const [started, setStarted] = useState(false);
@@ -20,9 +21,9 @@ function App() {
     const alreadyVisited = sessionStorage.getItem('alreadyVisited');
 
     if (isHome && !alreadyVisited) {
-      setStarted(false); 
+      setStarted(false);
     } else {
-      setStarted(true);  
+      setStarted(true);
     }
 
     setInitialCheckDone(true);
@@ -55,6 +56,9 @@ function App() {
             </Routes>
             <Footer />
           </div>
+
+          {/* ✅ OmniDimension AI Widget - Always available */}
+          <OmniAgent />
         </Router>
       )}
     </>
