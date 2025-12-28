@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
-/* NAVBAR STYLING */
+/* ---------------- NAVBAR STYLING ---------------- */
 #nav-overall {
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
   height: 4rem;
   color: whitesmoke;
-  background-color: black; 
+  background-color: black;
 }
 
 #nav-div {
@@ -42,15 +42,13 @@
   width: calc(100% - 20px);
 }
 
-/* Music */
+/* ---------------- MUSIC ICON ANIMATION ---------------- */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-/* Music Ends */
-
-/* HERO SECTION */
+/* ---------------- HERO SECTION ---------------- */
 .hero-section {
   min-height: 75vh;
   background-color: black;
@@ -76,7 +74,7 @@
 .hero-content h2 {
   font-size: 2.5rem;
   font-weight: normal;
-  color: whitesmoke; 
+  color: whitesmoke;
 }
 
 .typing-text {
@@ -96,7 +94,7 @@
   animation: shine 2.5s ease-in-out infinite;
 }
 
-/* SOCIAL ICONS */
+/* ---------------- SOCIAL ICONS ---------------- */
 #social-icons {
   display: flex;
   justify-content: center;
@@ -129,18 +127,20 @@
   z-index: 0;
 }
 
-/* ANIMATIONS */
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
+/* ---------------- ANIMATIONS ---------------- */
 @keyframes shine {
   0% { background-position: 200% 0; }
-  100% { background-position: 0 0; }
+  50% { background-position: 0 0; }
+  100% { background-position: 200% 0; }
 }
 
-/* ABOUT SECTION PLACEHOLDER */
+@keyframes shimmer {
+  0% { background-position: 300% 0; }
+  50% { background-position: 0 0; }
+  100% { background-position: 300% 0; }
+}
+
+/* ---------------- COMING SOON TEXT ---------------- */
 .coming-soon-text {
   font-size: 70px;
   font-weight: 800;
@@ -162,76 +162,40 @@
   text-transform: capitalize;
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: 300% 0;
-  }
-  50% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 300% 0;
-  }
-}
-
-/* Skills Styling Starts*/
-
-/* Skills Styling Ends*/
-
-/* Enter Style */
+/* ---------------- ENTER SCREEN ---------------- */
 .shine-animation {
   animation: shine 6s ease-in-out infinite;
 }
 
-@keyframes shine {
-  0% { background-position: 200% 0; }
-  50% { background-position: 0 0; }
-  100% { background-position: 200% 0; }
-}
-/* Enter Style ends */
-
-/* NAVBAR: Adjust gap for mobile */
+/* ---------------- NAVBAR MOBILE ADJUST ---------------- */
 @media screen and (max-width: 768px) {
-  #nav-div {
-    gap: 0.8rem;
-  }
-
-  .hero-section {
-    padding: 0 0.5rem;
-  }
-
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-content h2 {
-    font-size: 1.5rem;
-  }
+  #nav-div { gap: 0.8rem; }
+  .hero-section { padding: 0 0.5rem; }
+  .hero-content h1 { font-size: 2.5rem; }
+  .hero-content h2 { font-size: 1.5rem; }
 }
 
-/* Responsive heading for Skills */
 @media screen and (max-width: 640px) {
-  .skills-heading {
-    font-size: 2rem;
-  }
+  .skills-heading { font-size: 2rem; }
 }
 
-
-/* GLOBAL STYLES */
+/* ---------------- GLOBAL STYLES ---------------- */
 html, body {
   background-color: black;
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  color: whitesmoke; 
+  color: whitesmoke;
 }
 
-/* For hiding scroll bar*/
-html::-webkit-scrollbar {
-  display: none;
-}
-html {
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none; /* For IE and Edge */
-}
+/* Hide Scrollbar */
+html::-webkit-scrollbar { display: none; }
+html { scrollbar-width: none; -ms-overflow-style: none; }
 
+/* ---------------- OMNIDIMENSION AI WIDGET ---------------- */
+#omnidimension-web-widget {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 9999 !important;
+}

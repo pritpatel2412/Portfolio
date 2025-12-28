@@ -41,8 +41,7 @@ const About = () => {
             Currently pursuing my academic journey, I actively bring ideas to life through personal and open-source projects. I thrive on learning by building, and I’m always exploring real-world challenges to sharpen my skills. With a strong command of modern web technologies — especially React — I enjoy crafting clean, efficient solutions to complex problems.
           </p>
           <p className="text-lg leading-relaxed mb-4">
-            I’m also in the early stages of building a tech startup called Xeon, where I’m turning bold ideas into structured experiments. This journey is shaping my entrepreneurial mindset while sharpening my skills in product thinking, strategy, and leadership — all fueled by constant iteration and real-world feedback.
-          </p>
+I'm building Xeon, a startup pitch platform that transforms bold ideas into structured opportunities. This venture is helping me grow my entrepreneurial mindset while honing skills in product thinking, strategy, and leadership — all through real-world feedback and continuous iteration.          </p>
           <p className="text-lg leading-relaxed">
             My goal is to take on challenging projects, learn from experienced mentors, and contribute meaningfully to the tech community.
           </p>
