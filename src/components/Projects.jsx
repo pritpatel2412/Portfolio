@@ -18,10 +18,10 @@ const projects = [
 
   },
   {
-    title: "Clyra",
-    description: "A sleek, responsive wallpaper website offering a curated collection of high-quality backgrounds. Clyra is built with a clean UI and smooth navigation to make finding and downloading wallpapers effortless.",
-    link: "https://clyra45.vercel.app/home",
-    image: "/clyra_thumbnail.jpg",
+    title: "CodeGuard",
+    description: "Code Guard is an AI-powered code security and pull request (PR) risk analysis platform designed to help developers and teams identify risky code changes before they are merged into production.",
+    link: "https://code-guard-45.vercel.app/",
+    image: "/codeguard_thumbnail.jpg",
     blurhash: "L26z$X~q00Rj_3kC%MRj~qkC?bof" // replace if you have the actual blurhash
 
   },
