@@ -44,7 +44,7 @@ const projects = [
   {
     title: "Flowsketch",
     description: "A simple and intuitive tool to create, edit, and export flowcharts and diagrams. Ideal for developers, students, and teams to easily visualize ideas, algorithms, and workflows.",
-    link: "https://flowsketch.vercel.app/",
+    link: "https://flow-sketch-iota.vercel.app/",
     image: "/flowsketch_thumbnail.jpg",
     blurhash: "L44x9Y~q00Rj_3kC%MRj~qkC?bof" // replace with actual blurhash if available
 
