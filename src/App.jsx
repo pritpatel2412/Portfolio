@@ -10,6 +10,7 @@ import EnterScreen from './components/EnterScreen';
 import Footer from './components/Footer';
 import Skills from './components/Skills';
 import OmniAgent from './components/OmniAgent'; // ✅ Import the AI widget
+import GlobalRobot from './components/GlobalRobot'; // ✅ Import the flying robot
 
 function App() {
   const [started, setStarted] = useState(false);
@@ -59,6 +60,9 @@ function App() {
 
           {/* ✅ OmniDimension AI Widget - Always available */}
           <OmniAgent />
+
+          {/* ✅ Global Flying Robot - Follows cursor everywhere */}
+          <GlobalRobot />
         </Router>
       )}
     </>

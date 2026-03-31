@@ -4,12 +4,14 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const formRef = useRef(null); 
+  const formRef = useRef(null);
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState(null);
 
+  // Initialize EmailJS and ensure the page is scrollable
   useEffect(() => {
-    document.body.style.overflow = "hidden";
+    emailjs.init("SOJX1V8QGKkoCpxHW");
+    document.body.style.overflow = "auto";
     return () => {
       document.body.style.overflow = "";
     };
@@ -22,11 +24,13 @@ const Contact = () => {
     if (!formRef.current) return;
 
     emailjs.sendForm(
-  "service_prlpgfd",
-  "template_kaia8pq",
-  formRef.current,
-  "SOJX1V8QGKkoCpxHW"
-)
+      "service_prlpgfd",
+      "template_kaia8pq",
+      formRef.current,
+      {
+        publicKey: "SOJX1V8QGKkoCpxHW",
+      }
+    )
 
       .then(() => {
         setStatus("✅ Message sent successfully!");
@@ -54,11 +58,11 @@ const Contact = () => {
       <div className="pointer-events-none absolute inset-0 z-10 bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
 
       {/* Content */}
-      <div className="relative z-20 max-w-xl w-full text-center">
+      <div className="relative z-[60] max-w-xl w-full text-center">
         <h1 className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-5xl sm:text-7xl font-extrabold text-transparent">
           Connect with Me
         </h1>
-        <p className="mt-4 text-neutral-400 text-lg">Let’s chat — drop a message!</p>
+        <p className="mt-4 text-neutral-400 text-lg">Let's chat — drop a message!</p>
 
         <form ref={formRef} onSubmit={sendEmail} className="mt-10 space-y-4">
           <input
@@ -71,9 +75,8 @@ const Contact = () => {
           <input
             type="email"
             name="email"
-            placeholder="Email (must be Gmail)"
+            placeholder="Email (Gmail preferred)"
             required
-            pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
             className="w-full rounded-md bg-black/40 px-4 py-2 text-white placeholder-neutral-400 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-white/20"
           />
           <textarea
@@ -84,7 +87,7 @@ const Contact = () => {
             className="w-full rounded-md bg-black/40 px-4 py-2 text-white placeholder-neutral-400 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-white/20"
           />
 
-          <div className="mt-6 flex justify-center">
+          <div className="mt-6 flex justify-center relative z-[60]">
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"

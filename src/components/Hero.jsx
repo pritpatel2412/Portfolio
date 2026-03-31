@@ -2,7 +2,7 @@ import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode, SiCodeforces } from "react-icons/si";
-import { cn } from '../lib/utils'; 
+import { cn } from '../lib/utils';
 
 const Hero = () => {
   return (
@@ -15,7 +15,7 @@ const Hero = () => {
           "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
         )}
       />
-      
+
       {/* Radial Mask */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
 
@@ -39,7 +39,7 @@ const Hero = () => {
           </span>
         </h2>
 
-        <div className="flex justify-center gap-4 mt-6 text-2xl">
+        <div className="flex justify-center gap-4 mt-6 text-2xl relative z-[60]">
           <a href="https://github.com/pritpatel2412" target="_blank" rel="noopener noreferrer" className="icon-circle hover:text-white transition">
             <FaGithub />
           </a>
@@ -52,7 +52,7 @@ const Hero = () => {
           <a href="https://leetcode.com/u/prit__2412/" target="_blank" rel="noopener noreferrer" className="icon-circle hover:text-yellow-500 transition">
             <SiLeetcode />
           </a>
-          
+
         </div>
       </div>
     </div>

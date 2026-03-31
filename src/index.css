@@ -8,6 +8,8 @@
   height: 4rem;
   color: whitesmoke;
   background-color: black;
+  position: relative;
+  z-index: 100;
 }
 
 #nav-div {
@@ -44,8 +46,13 @@
 
 /* ---------------- MUSIC ICON ANIMATION ---------------- */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* ---------------- HERO SECTION ---------------- */
@@ -79,14 +86,12 @@
 
 .typing-text {
   font-weight: bold;
-  background: linear-gradient(
-    115deg,
-    #1f1f1f 0%,
-    #4b4b4b 30%,
-    #ffffff 50%,
-    #4b4b4b 70%,
-    #1f1f1f 100%
-  );
+  background: linear-gradient(115deg,
+      #1f1f1f 0%,
+      #4b4b4b 30%,
+      #ffffff 50%,
+      #4b4b4b 70%,
+      #1f1f1f 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -112,6 +117,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  z-index: 60;
 }
 
 .icon-circle::after {
@@ -129,15 +135,31 @@
 
 /* ---------------- ANIMATIONS ---------------- */
 @keyframes shine {
-  0% { background-position: 200% 0; }
-  50% { background-position: 0 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: 200% 0;
+  }
+
+  50% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: 300% 0; }
-  50% { background-position: 0 0; }
-  100% { background-position: 300% 0; }
+  0% {
+    background-position: 300% 0;
+  }
+
+  50% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 300% 0;
+  }
 }
 
 /* ---------------- COMING SOON TEXT ---------------- */
@@ -145,14 +167,12 @@
   font-size: 70px;
   font-weight: 800;
   text-align: center;
-  background: linear-gradient(
-    90deg,
-    #888888,
-    #bcbcbc,
-    #ffffff,
-    #bcbcbc,
-    #888888
-  );
+  background: linear-gradient(90deg,
+      #888888,
+      #bcbcbc,
+      #ffffff,
+      #bcbcbc,
+      #888888);
   background-size: 300% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -169,18 +189,32 @@
 
 /* ---------------- NAVBAR MOBILE ADJUST ---------------- */
 @media screen and (max-width: 768px) {
-  #nav-div { gap: 0.8rem; }
-  .hero-section { padding: 0 0.5rem; }
-  .hero-content h1 { font-size: 2.5rem; }
-  .hero-content h2 { font-size: 1.5rem; }
+  #nav-div {
+    gap: 0.8rem;
+  }
+
+  .hero-section {
+    padding: 0 0.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 640px) {
-  .skills-heading { font-size: 2rem; }
+  .skills-heading {
+    font-size: 2rem;
+  }
 }
 
 /* ---------------- GLOBAL STYLES ---------------- */
-html, body {
+html,
+body {
   background-color: black;
   min-height: 100vh;
   margin: 0;
@@ -189,8 +223,14 @@ html, body {
 }
 
 /* Hide Scrollbar */
-html::-webkit-scrollbar { display: none; }
-html { scrollbar-width: none; -ms-overflow-style: none; }
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 
 /* ---------------- OMNIDIMENSION AI WIDGET ---------------- */
 #omnidimension-web-widget {
