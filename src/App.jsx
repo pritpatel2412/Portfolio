@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Skills from './components/Skills';
 import OmniAgent from './components/OmniAgent'; // ✅ Import the AI widget
 import GlobalRobot from './components/GlobalRobot'; // ✅ Import the flying robot
+import { Analytics } from '@vercel/analytics/react'; // ✅ Import Vercel Analytics
 
 function App() {
   const [started, setStarted] = useState(false);
@@ -63,6 +64,9 @@ function App() {
 
           {/* ✅ Global Flying Robot - Follows cursor everywhere */}
           <GlobalRobot />
+
+          {/* Vercel Analytics */}
+          <Analytics />
         </Router>
       )}
     </>
