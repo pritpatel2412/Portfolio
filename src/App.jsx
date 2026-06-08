@@ -9,6 +9,8 @@ import Loader from './components/Loader';
 import EnterScreen from './components/EnterScreen';
 import Footer from './components/Footer';
 import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Ideas from './components/Ideas';
 import OmniAgent from './components/OmniAgent'; // ✅ Import the AI widget
 import GlobalRobot from './components/GlobalRobot'; // ✅ Import the flying robot
 import { Analytics } from '@vercel/analytics/react'; // ✅ Import Vercel Analytics
@@ -53,6 +55,8 @@ function App() {
               <Route path="/" element={<Hero />} />
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/experience" element={<Experience />} />
+              <Route path="/ideas" element={<Ideas />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/skills" element={<Skills />} />
             </Routes>

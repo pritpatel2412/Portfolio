@@ -14,78 +14,80 @@ const projects = [
     description: "Developed RedForge, an autonomous security assessment platform that combines parallel vulnerability scanning, attack-chain analysis, and AI-powered security insights. The platform helps identify, prioritize, and remediate web application security risks through automated detection and intelligent recommendations.",
     link: "https://github.com/pritpatel2412/RedForge",
     image: "/RedForge.png",
-    blurhash: "L15f+F~q00Rj_3kC%MRj~qkC?bof"
+    blurhash: "L15f+F~q00Rj_3kC%MRj~qkC?bof",
+    status: "Under Building"
   },
   {
     title: "SearchMind API",
     description: "Engineered SearchMind, an AI-powered search and research platform that enables LLMs and autonomous agents to access real-time web information through optimized search, extraction, and research APIs. Built with FastAPI, PostgreSQL, Redis, and React to support scalable, low-latency AI workflows.",
     link: "https://github.com/pritpatel2412/SearchMind-API",
     image: "/Searchmind API.png",
-    blurhash: "L26z$X~q00Rj_3kC%MRj~qkC?bof"
+    blurhash: "L26z$X~q00Rj_3kC%MRj~qkC?bof",
+    status: "Under Building"
   },
   {
     title: "Kyren",
     description: "Kyren is an AI-powered education platform that lets users create structured, university-grade courses from a topic, YouTube playlist, or syllabus image. It also offers exam generation (PaperX), AI proctoring (ProctorX), a doubt assistant, peer learning, and adaptive evaluation—all in one ecosystem.",
     link: "https://kyren.vercel.app/",
     image: "/kyren_thumbnail.png",
-    blurhash: "L15f+F~q00Rj_3kC%MRj~qkC?bof"
-
+    blurhash: "L15f+F~q00Rj_3kC%MRj~qkC?bof",
+    status: "Completed"
   },
   {
     title: "CodeGuard",
     description: "Code Guard is an AI-powered code security and pull request (PR) risk analysis platform designed to help developers and teams identify risky code changes before they are merged into production.",
     link: "https://code-guard-45.vercel.app/",
     image: "/codeguard_thumbnail.jpg",
-    blurhash: "L26z$X~q00Rj_3kC%MRj~qkC?bof" // replace if you have the actual blurhash
-
+    blurhash: "L26z$X~q00Rj_3kC%MRj~qkC?bof",
+    status: "Completed"
   },
   {
     title: "KemLang",
     description: "A Gujarati-inspired toy programming language that blends cultural flavor with real coding logic. Designed to make programming feel more accessible, fun, and local—especially for beginners.",
     link: "https://kemlang.vercel.app/",
     image: "/kemlang_thumbnail.png",
-    blurhash: "L15f+F~q00Rj_3kC%MRj~qkC?bof" // replace with actual blurhash if available
-
+    blurhash: "L15f+F~q00Rj_3kC%MRj~qkC?bof",
+    status: "Completed"
   },
   {
     title: "ARIA",
     description: "ARIA is a full-stack AI agent platform that turns user goals (in 11 Indian languages) into real actions—running parallel browser agents to gather live data, generate answers, and deliver them via voice.",
     link: "https://heyaria.replit.app/",
     image: "/aria_thumbnail.png",
-    blurhash: "L35x8X~q00Rj_3kC%MRj~qkC?bof" // replace with your actual blurhash if available
-
+    blurhash: "L35x8X~q00Rj_3kC%MRj~qkC?bof",
+    status: "Completed"
   },
   {
     title: "Flowsketch",
     description: "A simple and intuitive tool to create, edit, and export flowcharts and diagrams. Ideal for developers, students, and teams to easily visualize ideas, algorithms, and workflows.",
     link: "https://flowsketch.vercel.app/",
     image: "/flowsketch_thumbnail.png",
-    blurhash: "L44x9Y~q00Rj_3kC%MRj~qkC?bof" // replace with actual blurhash if available
-
+    blurhash: "L44x9Y~q00Rj_3kC%MRj~qkC?bof",
+    status: "Completed"
   },
   {
     title: "Learning Management System",
     description: "A web-based platform that streamlines the delivery, management, and tracking of educational content. It connects students, instructors, and admins in a centralized, interactive learning environment.",
     link: "https://lms-frontend-5g2b.onrender.com",
     image: "/lms_thumbnail.jpg",
-    blurhash: "L54x9c~q00Rj_3kC%MRj~qkC?bof" // replace with your actual blurhash if available
-
+    blurhash: "L54x9c~q00Rj_3kC%MRj~qkC?bof",
+    status: "Completed"
   },
   {
     title: "Scraply",
     description: "Scraply — A smart web scraping tool that extracts full website content from any public URL 🌐. Features include structured data export (JSON, CSV, Markdown), NLP insights, media downloader, and ethical scraping controls.",
     link: "https://scraply-45.lovable.app",
     image: "/scraply_thumbnail.jpg",
-    blurhash: "L65x9f~q00Rj_3kC%MRj~qkC?bof" // replace with your actual blurhash if available
-
+    blurhash: "L65x9f~q00Rj_3kC%MRj~qkC?bof",
+    status: "Completed"
   },
   {
     title: "Snippix",
     description: "A smart and organized platform to save, manage, and share code snippets. Designed for developers to boost productivity, store reusable code, and collaborate effortlessly.",
     link: "https://snippix.vercel.app/",
     image: "/snippix_thumbnail.png",
-    blurhash: "L35x8X~q00Rj_3kC%MRj~qkC?bof" // replace with actual blurhash if available
-
+    blurhash: "L35x8X~q00Rj_3kC%MRj~qkC?bof",
+    status: "Completed"
   },
   {
     title: "Coming Soon",
@@ -170,12 +172,27 @@ const Projects = () => {
         {projects.map((project, index) => (
           <CardContainer key={index} className="inter-var relative z-[60]">
             <CardBody className="bg-black relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
-              <CardItem
-                translateZ="50"
-                className="text-xl font-bold text-white"
-              >
-                {project.title}
-              </CardItem>
+              <div className="flex justify-between items-center w-full">
+                <CardItem
+                  translateZ="50"
+                  className="text-xl font-bold text-white"
+                >
+                  {project.title}
+                </CardItem>
+                {project.status && (
+                  <CardItem
+                    translateZ="50"
+                    className={cn(
+                      "px-2 py-0.5 text-[8px] md:text-[9px] font-bold uppercase tracking-wider rounded-full border backdrop-blur-sm",
+                      project.status === "Under Building" 
+                        ? "bg-amber-500/10 text-amber-400 border-amber-500/30 shadow-[0_0_10px_rgba(245,158,11,0.2)]"
+                        : "bg-emerald-500/10 text-emerald-400 border-emerald-500/30 shadow-[0_0_10px_rgba(16,185,129,0.2)]"
+                    )}
+                  >
+                    {project.status}
+                  </CardItem>
+                )}
+              </div>
               <CardItem
                 as="p"
                 translateZ="60"
