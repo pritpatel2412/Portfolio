@@ -10,6 +10,20 @@ import ProjectImage from "./utils/ProjectImage";
 
 const projects = [
   {
+    title: "RedForge",
+    description: "Developed RedForge, an autonomous security assessment platform that combines parallel vulnerability scanning, attack-chain analysis, and AI-powered security insights. The platform helps identify, prioritize, and remediate web application security risks through automated detection and intelligent recommendations.",
+    link: "https://github.com/pritpatel2412/RedForge",
+    image: "/RedForge.png",
+    blurhash: "L15f+F~q00Rj_3kC%MRj~qkC?bof"
+  },
+  {
+    title: "SearchMind API",
+    description: "Engineered SearchMind, an AI-powered search and research platform that enables LLMs and autonomous agents to access real-time web information through optimized search, extraction, and research APIs. Built with FastAPI, PostgreSQL, Redis, and React to support scalable, low-latency AI workflows.",
+    link: "https://github.com/pritpatel2412/SearchMind-API",
+    image: "/Searchmind API.png",
+    blurhash: "L26z$X~q00Rj_3kC%MRj~qkC?bof"
+  },
+  {
     title: "Kyren",
     description: "Kyren is an AI-powered education platform that lets users create structured, university-grade courses from a topic, YouTube playlist, or syllabus image. It also offers exam generation (PaperX), AI proctoring (ProctorX), a doubt assistant, peer learning, and adaptive evaluation—all in one ecosystem.",
     link: "https://kyren.vercel.app/",
