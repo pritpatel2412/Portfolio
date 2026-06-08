@@ -24,7 +24,7 @@ const experiences = [
     id: 3,
     title: "AI Developer Intern",
     company: "StayChat AI",
-    date: "June 2026 - Sept 2026",
+    date: "June 2026 - Present",
     description: "As an AI Developer Intern at StayChat AI, I contribute to the development of AI-powered products using Large Language Models (LLMs), RAG architectures, and modern backend technologies. My work focuses on building scalable, production-ready AI solutions and enhancing intelligent user experiences.",
     badge: "Current"
   }
