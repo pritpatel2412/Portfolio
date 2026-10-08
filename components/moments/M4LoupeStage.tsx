@@ -110,7 +110,7 @@ export function M4LoupeStage({ speed, isReduced, isMobile }: M4StageProps) {
         >
           {/* Base Image */}
           <Image
-            src="/projects/searchmind-api.png"
+            src="/Searchmind API.png"
             alt="SearchMind API system dashboard frame"
             fill
             sizes="800px"
@@ -138,7 +138,7 @@ export function M4LoupeStage({ speed, isReduced, isMobile }: M4StageProps) {
               <div
                 className="absolute inset-0 bg-cover bg-no-repeat"
                 style={{
-                  backgroundImage: "url('/projects/searchmind-api.png')",
+                  backgroundImage: "url('/Searchmind API.png')",
                   backgroundSize: `${MAGNIFICATION * 100}%`,
                   backgroundPosition: `${(lensPos.x / (frameRef.current?.clientWidth || 1)) * 100}% ${(lensPos.y / (frameRef.current?.clientHeight || 1)) * 100}%`,
                 }}

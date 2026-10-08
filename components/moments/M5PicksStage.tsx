@@ -14,7 +14,7 @@ const DEMO_PROJECTS = [
     year: '2025',
     role: 'Lead Architect',
     outcome: 'Sub-80ms p95 latency across distributed edge nodes',
-    imageSrc: '/projects/redforge.png',
+    imageSrc: '/RedForge.png',
   },
   {
     slug: 'searchmind-api',
@@ -23,7 +23,7 @@ const DEMO_PROJECTS = [
     year: '2024',
     role: 'Staff Engineer',
     outcome: 'Real-time neural search index serving 12M requests/day',
-    imageSrc: '/projects/searchmind-api.png',
+    imageSrc: '/Searchmind API.png',
   },
   {
     slug: 'kemlang-compiler',
@@ -32,7 +32,7 @@ const DEMO_PROJECTS = [
     year: '2024',
     role: 'Author',
     outcome: 'Deterministic bytecode generation with zero runtime GC',
-    imageSrc: '/projects/kemlang.png',
+    imageSrc: '/kemlang_thumbnail.png',
   },
 ];
 
