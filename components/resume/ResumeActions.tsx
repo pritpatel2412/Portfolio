@@ -1,10 +1,17 @@
 'use client';
 
 import React from 'react';
-import { Printer, Download, Share2 } from 'lucide-react';
+import { Printer, Download, Share2, ExternalLink } from 'lucide-react';
 import { useToast } from '@/components/system/Toast';
+import { track } from '@/lib/track';
 
-export function ResumeActions() {
+interface ResumeActionsProps {
+  resumeUrl?: string;
+}
+
+export function ResumeActions({
+  resumeUrl = 'https://drive.google.com/file/d/1Bt-CZQPBR7nR3JIpSOiYxlooDv3V93MS/view?usp=drive_link',
+}: ResumeActionsProps) {
   const { showToast } = useToast();
 
   const handlePrint = () => {
@@ -40,15 +47,18 @@ export function ResumeActions() {
           <span>PRINT / PDF</span>
         </button>
 
-        <button
-          type="button"
-          onClick={handlePrint}
+        <a
+          href={resumeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => track('resume_download')}
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-[var(--radius-ui)] bg-[var(--safelight)] text-[var(--on-safelight,#0A0908)] font-bold uppercase transition-opacity hover:opacity-90 cursor-pointer min-h-[38px] focus-visible:outline-2 focus-visible:outline-[var(--safelight)]"
-          aria-label="Download clean A4 / Letter formatted PDF"
+          aria-label="Open and download hosted PDF résumé on Google Drive"
         >
           <Download className="w-3.5 h-3.5" />
           <span>DOWNLOAD PDF</span>
-        </button>
+          <ExternalLink className="w-3 h-3 opacity-70" />
+        </a>
 
         <button
           type="button"

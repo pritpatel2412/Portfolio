@@ -1,0 +1,119 @@
+{
+  "basics": {
+    "name": "Prit Patel",
+    "label": "Full-Stack & AI Systems Developer",
+    "email": "try.prit24@gmail.com",
+    "url": "https://github.com/pritpatel2412",
+    "summary": "Builder at the intersection of AI, systems, and design. Experienced in building production-grade LLM pipelines, autonomous agent swarms, and scalable distributed backends. Solved 400+ problems on LeetCode with strong foundations in data structures and system design.",
+    "location": {
+      "city": "Vadodara",
+      "region": "Gujarat",
+      "countryCode": "IN"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "pritpatel2412",
+        "url": "https://github.com/pritpatel2412"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "prit-patel-904272307",
+        "url": "https://www.linkedin.com/in/prit-patel-904272307"
+      },
+      {
+        "network": "LeetCode",
+        "username": "prit__2412",
+        "url": "https://leetcode.com/u/prit__2412/"
+      },
+      {
+        "network": "Google Drive PDF",
+        "username": "Prit Patel Résumé",
+        "url": "https://drive.google.com/file/d/1Bt-CZQPBR7nR3JIpSOiYxlooDv3V93MS/view?usp=drive_link"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "StayChat AI",
+      "position": "AI Developer Intern",
+      "startDate": "2026-06-01",
+      "summary": "Engineering production LLM pipelines, RAG architectures, and high-performance backend microservices for intelligent real-time conversational agents.",
+      "highlights": [
+        "Implemented low-latency semantic caching reducing repeat vector queries by 64%",
+        "Designed asynchronous document parsing and ingestion pipelines"
+      ]
+    },
+    {
+      "name": "HorizonTechX",
+      "position": "Full Stack Developer Intern",
+      "startDate": "2026-04-01",
+      "endDate": "2026-05-31",
+      "summary": "Built LUMINA, a full-stack social media application with end-to-end authentication, media processing, and social graph feeds.",
+      "highlights": [
+        "Architected relational PostgreSQL schemas and secure JWT auth flows",
+        "Delivered responsive React frontends with modular reusable components"
+      ]
+    },
+    {
+      "name": "FutureTech Innovations",
+      "position": "Web Developer Intern",
+      "startDate": "2025-05-01",
+      "endDate": "2025-06-30",
+      "summary": "Designed and engineered KemLang, a Gujarati toy programming language compiler, interactive browser playground, and official VS Code tooling.",
+      "highlights": [
+        "Developed custom lexer and recursive-descent AST interpreter in Python",
+        "Built web playground with Monaco Editor and published VS Code syntax package"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Computer Science & Engineering",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Technology",
+      "score": "9.67 GPA",
+      "courses": [
+        "Data Structures & Algorithms",
+        "Database Management Systems",
+        "Operating Systems",
+        "Computer Networks",
+        "System Design"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "AI & Systems",
+      "level": "Advanced",
+      "keywords": ["LLMs", "RAG Pipelines", "Autonomous Agents", "FastAPI", "Vector Databases", "Playwright"]
+    },
+    {
+      "name": "Full-Stack Development",
+      "level": "Advanced",
+      "keywords": ["TypeScript", "Python", "React", "Next.js", "Node.js", "Tailwind CSS", "PostgreSQL", "Redis"]
+    },
+    {
+      "name": "DevOps & Core Tools",
+      "level": "Intermediate",
+      "keywords": ["Docker", "Git", "Linux", "REST APIs", "WebSockets"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "RedForge",
+      "description": "Autonomous security assessment platform with parallel vulnerability scanning and AI attack-chain verification.",
+      "url": "https://github.com/pritpatel2412/RedForge"
+    },
+    {
+      "name": "SearchMind API",
+      "description": "High-throughput search and web extraction API purpose-built for low-latency autonomous agent RAG workflows.",
+      "url": "https://github.com/pritpatel2412/SearchMind-API"
+    },
+    {
+      "name": "Kyren",
+      "description": "AI-powered educational OS generating university courses, proctored exams, and adaptive doubt resolution.",
+      "url": "https://kyren.vercel.app/"
+    }
+  ]
+}

@@ -139,6 +139,7 @@ export const SiteSchema = z.object({
     linkedin: z.string(),
     leetcode: z.string(),
     instagram: z.string().optional(),
+    resume: z.string().optional(),
   }),
   services: z.array(
     z.object({

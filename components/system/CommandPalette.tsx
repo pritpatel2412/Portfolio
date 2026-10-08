@@ -2,9 +2,10 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { Search, ArrowRight, CornerDownLeft, Copy, Sun, Moon, ExternalLink } from 'lucide-react';
+import { Search, ArrowRight, CornerDownLeft, Copy, Sun, Moon, ExternalLink, Download } from 'lucide-react';
 import { useToast } from './Toast';
 import { site } from '@/content/site';
+import { track } from '@/lib/track';
 
 interface CommandPaletteProps {
   isOpen: boolean;
@@ -167,6 +168,18 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
       icon: <ExternalLink className="w-3.5 h-3.5" />,
       action: () => {
         window.open(site.links.github, '_blank', 'noopener,noreferrer');
+        onClose();
+      },
+    },
+    {
+      id: 'act-resume-drive',
+      category: 'Actions',
+      title: 'Download PDF Résumé',
+      subtitle: 'Open direct PDF hosted on Google Drive',
+      icon: <Download className="w-3.5 h-3.5" />,
+      action: () => {
+        window.open(site.links.resume || 'https://drive.google.com/file/d/1Bt-CZQPBR7nR3JIpSOiYxlooDv3V93MS/view?usp=drive_link', '_blank', 'noopener,noreferrer');
+        track('resume_download');
         onClose();
       },
     },

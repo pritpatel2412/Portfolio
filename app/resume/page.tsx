@@ -32,7 +32,7 @@ export default function ResumePage() {
       '@type': 'EducationalOrganization',
       name: 'Parul University',
     },
-    sameAs: [links.github, links.linkedin, links.leetcode],
+    sameAs: [links.github, links.linkedin, links.leetcode, links.resume].filter(Boolean),
   };
 
   return (
@@ -101,7 +101,7 @@ export default function ResumePage() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-8 pt-8">
         {/* Interactive Action Bar (Hidden when printing) */}
-        <ResumeActions />
+        <ResumeActions resumeUrl={links.resume} />
 
         {/* ATS-Friendly Semantic Résumé Document */}
         <article
@@ -133,6 +133,16 @@ export default function ResumePage() {
               <span>·</span>
               <a href={links.linkedin} target="_blank" rel="noreferrer" className="hover:underline">
                 linkedin.com/in/prit-patel-904272307
+              </a>
+              <span>·</span>
+              <a
+                href={links.resume}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:underline text-[var(--safelight)] print:text-black font-semibold inline-flex items-center gap-1"
+                aria-label="Direct Google Drive PDF Résumé"
+              >
+                <span>Google Drive PDF ↗</span>
               </a>
             </div>
           </header>
