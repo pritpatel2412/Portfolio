@@ -107,6 +107,17 @@ export default function ColophonPage() {
             </li>
           </ul>
         </div>
+
+        {/* Dynamic OG & Syndication */}
+        <div className="p-6 border border-[var(--line)] bg-[var(--surface)] rounded-[var(--radius-ui)] space-y-4 md:col-span-2">
+          <div className="flex items-center justify-between border-b border-[var(--line)] pb-3 font-bold text-sm text-[var(--text)]">
+            <span>05 / OPENGRAPH &amp; SYNDICATION</span>
+            <span className="text-[var(--safelight)]">DYNAMIC EDGE</span>
+          </div>
+          <p className="text-[var(--text-dim)] leading-relaxed">
+            Every route generates dynamic 1200×630 OpenGraph cards on the edge via Next.js ImageResponse styled in Darkroom typography and film border guides. Technical essays syndicate via standard RSS 2.0 at <code className="text-[var(--safelight)]">/rss.xml</code> with zero trackers.
+          </p>
+        </div>
       </div>
     </div>
   );

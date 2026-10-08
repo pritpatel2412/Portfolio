@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { projects } from '@/content/projects';
+import { ARTICLES } from '@/content/articles';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://pritpatel.dev';
@@ -9,6 +10,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: p.flagship ? 0.9 : 0.8,
+  }));
+
+  const articleUrls = ARTICLES.map((a) => ({
+    url: `${baseUrl}/writing/${a.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
   }));
 
   return [
@@ -26,7 +34,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...projectUrls,
     {
-      url: `${baseUrl}/work`,
+      url: `${baseUrl}/experience`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -41,8 +55,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/writing`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.7,
+      priority: 0.85,
     },
+    ...articleUrls,
     {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
