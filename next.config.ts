@@ -8,7 +8,6 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: '/work', destination: '/experience', permanent: true },
-      { source: '/skills', destination: '/#stack', permanent: true },
       { source: '/ideas', destination: '/projects', permanent: true },
       { source: '/articles', destination: '/writing', permanent: true },
       { source: '/posts', destination: '/writing', permanent: true },

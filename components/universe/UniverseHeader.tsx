@@ -22,9 +22,10 @@ export function UniverseHeader({ onOpenPalette, onOpenMenu }: UniverseHeaderProp
     { href: '/projects', label: 'Projects', num: '02' },
     { href: '/experience', label: 'Experience', num: '03' },
     { href: '/about', label: 'About', num: '04' },
-    { href: '/resume', label: 'Résumé', num: '05' },
-    { href: '/writing', label: 'Writing', num: '06' },
-    { href: '/contact', label: 'Contact', num: '07' },
+    { href: '/skills', label: 'Skills', num: '05' },
+    { href: '/resume', label: 'Résumé', num: '06' },
+    { href: '/writing', label: 'Writing', num: '07' },
+    { href: '/contact', label: 'Contact', num: '08' },
   ];
 
   // 1. EDITORIAL HEADER (Magazine Masthead)

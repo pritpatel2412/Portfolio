@@ -1,6 +1,6 @@
+import React from 'react';
 import type { Metadata } from 'next';
-import { ARTICLES } from '@/content/articles';
-import { WritingArchive } from '@/components/writing/WritingArchive';
+import { UniverseWritingView } from '@/components/writing/UniverseWritingView';
 
 export const metadata: Metadata = {
   title: 'Technical Writing & Field Notes — Prit Patel',
@@ -16,5 +16,5 @@ export const metadata: Metadata = {
 };
 
 export default function WritingIndexPage() {
-  return <WritingArchive articles={ARTICLES} />;
+  return <UniverseWritingView />;
 }
