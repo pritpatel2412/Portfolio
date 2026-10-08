@@ -1,0 +1,68 @@
+{
+  "name": "Prit Patel",
+  "role": "Full-Stack & AI Systems Developer",
+  "positioning": "I build high-throughput systems and precision web interfaces. 400+ PRs and algorithmic solutions in production.",
+  "location": "Vadodara, Gujarat, India",
+  "timezone": "Asia/Kolkata",
+  "availability": {
+    "status": "Available for Hire",
+    "types": ["Full-time Engineering", "Contract Systems Architecture", "AI Agent Tooling"]
+  },
+  "email": "try.prit24@gmail.com",
+  "links": {
+    "github": "https://github.com/pritpatel2412",
+    "linkedin": "https://www.linkedin.com/in/prit-patel-904272307",
+    "leetcode": "https://leetcode.com/u/prit__2412/"
+  },
+  "proofPoints": [
+    { "value": "400+", "label": "LeetCode Solutions Solved", "source": "LeetCode: prit__2412" },
+    { "value": "9.67", "label": "Academic GPA in Computer Science", "source": "University Transcript" },
+    { "value": "Sub-80ms", "label": "P95 RedForge Node Latency", "source": "Edge Benchmark" }
+  ],
+  "portrait": "/profile_pic1.png",
+  "aboutParagraphs": [
+    "I build at the intersection of AI, systems architecture, and precision digital interfaces. Engineering software for me is fundamentally about crafting deterministic systems that think, adapt, and scale—from autonomous security scanner swarms to low-latency LLM retrieval gateways.",
+    "Currently pursuing Computer Science with a 9.67 GPA, I have solved 400+ algorithmic problems on LeetCode and engineered production-grade platforms across asynchronous socket meshes, RAG embedding pipelines, and compiler runtimes.",
+    "Outside the code editor, I analyze distributed network protocols, build toy language parsers in native idioms, and rigorously study the mechanics of low-level software engineering."
+  ],
+  "principles": [
+    {
+      "num": "01",
+      "title": "Proof before poetry",
+      "desc": "Every engineering claim must be backed by reproducible benchmark metrics, unit tests, and measurable production logs."
+    },
+    {
+      "num": "02",
+      "title": "Systems-first reasoning",
+      "desc": "Understand network I/O, backpressure limits, and kernel socket boundaries before applying high-level application abstractions."
+    },
+    {
+      "num": "03",
+      "title": "Strict type boundaries",
+      "desc": "End-to-end typing from database schemas to client components prevents runtime regressions before code leaves development."
+    },
+    {
+      "num": "04",
+      "title": "Break it to build it",
+      "desc": "Stress-test edge cases under simulated network partition and concurrency saturation before declaring any architecture ready."
+    },
+    {
+      "num": "05",
+      "title": "Aggressive code subtraction",
+      "desc": "The best code is the code never written. Delete speculative boilerplate and rely on native platform primitives."
+    }
+  ],
+  "uses": [
+    { "category": "Editor & Environment", "items": "VS Code, Darkroom Custom Theme, Geist Mono, Windows Terminal / PowerShell" },
+    { "category": "Languages & Runtimes", "items": "TypeScript, Python 3.12, Node.js, SQL, C / C++" },
+    { "category": "Frameworks & Engines", "items": "Next.js (App Router), React, FastAPI, GSAP, Tailwind CSS v4" },
+    { "category": "Data & Infrastructure", "items": "PostgreSQL, Redis Streams, Docker, Playwright, Linux" }
+  ],
+  "currently": {
+    "date": "October 2026",
+    "building": "RedForge autonomous attack-chain verification engine",
+    "reading": "Designing Data-Intensive Applications by Martin Kleppmann",
+    "learning": "Distributed eBPF kernel tracing and WebAssembly runtime bytecode compilation"
+  },
+  "joke": "My code does not have bugs; it generates undocumented micro-features under extreme atmospheric pressure."
+}

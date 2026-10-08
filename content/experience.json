@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "totalRoles": 3,
+    "totalYears": "1+ Years",
+    "currentlyAt": "StayChat AI",
+    "currentRole": "AI Developer Intern"
+  },
+  "roles": [
+    {
+      "id": "staychat-ai",
+      "company": "StayChat AI",
+      "role": "AI Developer Intern",
+      "period": "June 2026 – Present",
+      "start": "2026-06",
+      "end": "Present",
+      "current": true,
+      "mode": "Remote",
+      "story": "Engineering core AI infrastructure focusing on production LLM pipelines, Retrieval-Augmented Generation (RAG) architectures, and high-throughput backend services.",
+      "outcomes": [
+        "Implemented low-latency semantic caching reducing repeat vector queries by 64%",
+        "Engineered asynchronous document chunking and vector retrieval pipelines",
+        "Deployed rate-limited inference gateways with Redis caching and hallucination evaluation suites"
+      ],
+      "linkedProject": "searchmind",
+      "linkedProjectTitle": "SearchMind API",
+      "stack": ["Python", "FastAPI", "RAG Pipelines", "Redis Vector Cache", "Docker"]
+    },
+    {
+      "id": "horizontechx",
+      "company": "HorizonTechX",
+      "role": "Full Stack Developer Intern",
+      "period": "April 2026 – May 2026",
+      "start": "2026-04",
+      "end": "2026-05",
+      "current": false,
+      "mode": "Remote",
+      "story": "Built LUMINA, a full-stack social media application with end-to-end authentication, media processing pipelines, and high-concurrency relational social graph feeds.",
+      "outcomes": [
+        "Architected normalized relational PostgreSQL schemas and secure JWT auth flows with role-based access control",
+        "Implemented media upload, image compression, and delivery microservices",
+        "Delivered responsive React user interfaces with strict component modularity"
+      ],
+      "linkedProject": "kyren",
+      "linkedProjectTitle": "Kyren",
+      "stack": ["React", "Node.js", "Express", "PostgreSQL", "Tailwind CSS"]
+    },
+    {
+      "id": "futuretech-innovations",
+      "company": "FutureTech Innovations",
+      "role": "Web Developer Intern",
+      "period": "May 2025 – June 2025",
+      "start": "2025-05",
+      "end": "2025-06",
+      "current": false,
+      "mode": "Remote",
+      "story": "Led the engineering of KemLang, a Gujarati programming language compiler and interpreter designed to ground programmatic computer science logic in native cultural idioms.",
+      "outcomes": [
+        "Developed custom lexical tokenizer and recursive-descent AST interpreter in Python",
+        "Engineered interactive browser-based code runner and Monaco Editor web playground",
+        "Published official VS Code language extension providing native syntax highlighting for 500+ developers"
+      ],
+      "linkedProject": "kemlang",
+      "linkedProjectTitle": "KemLang",
+      "stack": ["Python", "FastAPI", "React", "TypeScript", "Monaco Editor"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Parul University",
+      "degree": "Bachelor of Technology in Computer Science & Engineering",
+      "period": "2023 – 2027",
+      "gpa": "9.67 GPA",
+      "highlights": [
+        "Consistent academic excellence across all semesters (9.67 GPA)",
+        "Core Coursework: Data Structures & Algorithms, Database Management Systems, Operating Systems, Computer Networks, System Design"
+      ]
+    }
+  ]
+}
