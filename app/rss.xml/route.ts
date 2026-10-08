@@ -19,7 +19,8 @@ export async function GET() {
       <link>${itemUrl}</link>
       <guid isPermaLink="true">${itemUrl}</guid>
       <description><![CDATA[${article.summary}]]></description>
-      <category>${article.category}</category>
+      <category><![CDATA[${article.category}]]></category>
+      ${article.tags.map((t) => `<category><![CDATA[${t}]]></category>`).join('\n      ')}
       <pubDate>${pubDate}</pubDate>
     </item>`;
   }).join('\n');
