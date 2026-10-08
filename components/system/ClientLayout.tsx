@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation';
 import { SmoothScroll } from '@/components/motion/SmoothScroll';
 import { ToastProvider, useToast } from './Toast';
 import { Header } from './Header';
+import { UniverseHeader } from '@/components/universe/UniverseHeader';
+import { VibeSwitcher } from '@/components/universe/VibeSwitcher';
 import { Footer } from './Footer';
 import { MobileMenu } from './MobileMenu';
 import { CommandPalette } from './CommandPalette';
@@ -142,8 +144,8 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
           Skip to main content
         </a>
 
-        {/* Global Navigation Header */}
-        <Header
+        {/* Universe-Transforming Navigation Header */}
+        <UniverseHeader
           onOpenMenu={() => setIsMenuOpen(true)}
           onOpenPalette={() => setIsPaletteOpen(true)}
         />
@@ -152,6 +154,9 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
         <main id="main-content" className="min-h-screen pt-16 sm:pt-20">
           {children}
         </main>
+
+        {/* Seven Universes Floating Switcher Pill */}
+        <VibeSwitcher />
 
         {/* Global Footer */}
         <Footer />

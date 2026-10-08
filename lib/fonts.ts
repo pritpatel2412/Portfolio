@@ -1,4 +1,4 @@
-import { Archivo, Geist, Geist_Mono } from 'next/font/google';
+import { Archivo, Geist, Geist_Mono, Newsreader, Playfair_Display, Syne } from 'next/font/google';
 
 export const archivo = Archivo({
   subsets: ['latin'],
@@ -19,6 +19,24 @@ export const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
 });
 
-// Backward-compatibility aliases during migration
-export const bricolage = archivo;
-export const newsreader = archivo;
+export const newsreader = Newsreader({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-newsreader',
+  style: ['normal', 'italic'],
+});
+
+export const playfair = Playfair_Display({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-playfair',
+});
+
+export const syne = Syne({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-syne',
+  weight: ['700', '800'],
+});
+
+export const bricolage = syne;

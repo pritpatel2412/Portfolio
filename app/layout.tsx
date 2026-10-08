@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
-import { archivo, geist, geistMono } from '@/lib/fonts';
+import { archivo, geist, geistMono, newsreader, playfair, syne } from '@/lib/fonts';
 import { ClientLayout } from '@/components/system/ClientLayout';
+import { UniverseProvider } from '@/lib/universe';
 import { site } from '@/content/site';
 
 export const metadata: Metadata = {
@@ -57,18 +58,20 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${archivo.variable} ${geist.variable} ${geistMono.variable}`}
+      className={`${archivo.variable} ${geist.variable} ${geistMono.variable} ${newsreader.variable} ${playfair.variable} ${syne.variable}`}
       suppressHydrationWarning
     >
       <head>
-        {/* No-flash inline theme script per brief §4 */}
+        {/* No-flash inline theme and universe script */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){
               try {
+                var universe = localStorage.getItem('prit_portfolio_universe') || 'editorial';
+                document.documentElement.setAttribute('data-universe', universe);
                 var theme = localStorage.getItem('theme');
                 if (!theme) {
-                  theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+                  theme = (universe === 'noir' || universe === 'archive') ? 'dark' : 'light';
                 }
                 document.documentElement.setAttribute('data-theme', theme);
               } catch(e) {}
@@ -76,8 +79,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased selection:bg-[var(--safelight)] selection:text-[var(--bg)]">
-        <ClientLayout>{children}</ClientLayout>
+      <body className="antialiased selection:bg-[var(--safelight)] selection:text-[var(--bg)] transition-colors duration-300">
+        <UniverseProvider>
+          <ClientLayout>{children}</ClientLayout>
+        </UniverseProvider>
       </body>
     </html>
   );

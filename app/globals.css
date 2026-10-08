@@ -89,6 +89,122 @@
   --bg-raised: var(--surface-2);
 }
 
+/* ---------------------------------------------------- */
+/* SEVEN VISUAL UNIVERSES DESIGN TOKENS                 */
+/* ---------------------------------------------------- */
+
+/* 01: EDITORIAL (Magazine Spread) */
+[data-universe="editorial"] {
+  --bg: #F7F2EB;
+  --surface: #EDE5DB;
+  --surface-2: #E2D9CD;
+  --line: rgba(26, 24, 22, 0.14);
+  --line-strong: rgba(26, 24, 22, 0.32);
+  --text: #1A1816;
+  --text-dim: #6B645C;
+  --safelight: #B43A12;
+  --font-display: var(--font-newsreader), Georgia, serif;
+  --font-text: var(--font-geist), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --radius-ui: 2px;
+}
+
+/* 02: NEO MAXIMALIST (Graphic Poster & Stickers) */
+[data-universe="maximalist"] {
+  --bg: #FFF75A;
+  --surface: #FFFFFF;
+  --surface-2: #F4F4F0;
+  --line: #000000;
+  --line-strong: #000000;
+  --text: #0D0D0D;
+  --text-dim: #333333;
+  --safelight: #2563EB;
+  --font-display: var(--font-syne), impact, sans-serif;
+  --font-text: var(--font-geist), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --radius-ui: 14px;
+}
+
+/* 03: JAPANDI POP (Wabi-Sabi Art Publication) */
+[data-universe="japandi"] {
+  --bg: #EAE4D9;
+  --surface: #DFD7C9;
+  --surface-2: #D2C8B8;
+  --line: rgba(32, 30, 27, 0.12);
+  --line-strong: rgba(32, 30, 27, 0.28);
+  --text: #201E1B;
+  --text-dim: #666157;
+  --safelight: #BF573F;
+  --font-display: var(--font-newsreader), serif;
+  --font-text: var(--font-geist), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --radius-ui: 8px;
+}
+
+/* 04: SWISS MODERNIST (12-Column Grid & Red Disc) */
+[data-universe="swiss"] {
+  --bg: #F8F8FA;
+  --surface: #FFFFFF;
+  --surface-2: #ECECF0;
+  --line: rgba(10, 10, 10, 0.18);
+  --line-strong: rgba(10, 10, 10, 0.40);
+  --text: #0A0A0A;
+  --text-dim: #555555;
+  --safelight: #E11D48;
+  --font-display: var(--font-archivo), Helvetica, Arial, sans-serif;
+  --font-text: var(--font-geist), Helvetica, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --radius-ui: 0px;
+}
+
+/* 05: CLASSIC BRUTALIST (Raw HTML Document) */
+[data-universe="brutalist"] {
+  --bg: #E2DDD5;
+  --surface: #FFFFFF;
+  --surface-2: #D6D0C5;
+  --line: #000000;
+  --line-strong: #000000;
+  --text: #000000;
+  --text-dim: #222222;
+  --safelight: #0038A8;
+  --font-display: var(--font-geist-mono), Courier, monospace;
+  --font-text: var(--font-geist-mono), monospace;
+  --font-mono: var(--font-geist-mono), monospace;
+  --radius-ui: 0px;
+}
+
+/* 06: NOIR / AFTER HOURS (Cinematic Film Sequence) */
+[data-universe="noir"] {
+  --bg: #070707;
+  --surface: #111111;
+  --surface-2: #1A1A1A;
+  --line: rgba(237, 231, 223, 0.12);
+  --line-strong: rgba(237, 231, 223, 0.28);
+  --text: #EDE7DF;
+  --text-dim: #8A8276;
+  --safelight: #E07A28;
+  --font-display: var(--font-playfair), Didot, serif;
+  --font-text: var(--font-geist), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --radius-ui: 2px;
+}
+
+/* 07: DIGITAL ARCHIVE (Laboratory Museum & Schematics) */
+[data-universe="archive"] {
+  --bg: #0B0F17;
+  --surface: #131B28;
+  --surface-2: #1C273A;
+  --line: rgba(148, 163, 184, 0.16);
+  --line-strong: rgba(148, 163, 184, 0.35);
+  --text: #E2E8F0;
+  --text-dim: #7E8B9B;
+  --safelight: #06B6D4;
+  --font-display: var(--font-geist-mono), monospace;
+  --font-text: var(--font-geist), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --radius-ui: 4px;
+}
+
 /* Base Body Styles */
 html {
   background-color: var(--bg);
