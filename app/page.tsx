@@ -1,37 +1,38 @@
-'use client';
-
 import React from 'react';
-import { HeroMonument } from '@/components/home/HeroMonument';
-import { MarqueeStream } from '@/components/home/MarqueeStream';
-import { EditorialManifesto } from '@/components/home/EditorialManifesto';
-import { Thesis } from '@/components/home/Thesis';
-import { HorizontalDomainDeck } from '@/components/home/HorizontalDomainDeck';
-import { KineticProjectExhibition } from '@/components/home/KineticProjectExhibition';
-import { ContactCTA } from '@/components/home/ContactCTA';
+import type { Metadata } from 'next';
+import { DarkroomHero } from '@/components/home/DarkroomHero';
+import { SelectedWork } from '@/components/home/SelectedWork';
+import { WorkWithMe } from '@/components/home/WorkWithMe';
+import { StackMatrix } from '@/components/home/StackMatrix';
+import { WritingTeaser } from '@/components/home/WritingTeaser';
+import { ClosingCTA } from '@/components/home/ClosingCTA';
+import { site } from '@/content/site';
+
+export const metadata: Metadata = {
+  title: `${site.name} — Full-Stack & AI Systems Developer`,
+  description: `${site.positioning.lead} ${site.positioning.italicPhrase} ${site.positioning.trail}`,
+};
 
 export default function HomePage() {
   return (
     <div className="flex flex-col w-full overflow-x-hidden">
-      {/* 1. MONUMENTAL TYPOGRAPHIC HERO & INTERACTIVE SYSTEM DECK */}
-      <HeroMonument />
+      {/* 1. HERO (100svh): Kinetic Wordmark, Positioning, Proof Strip, Latent Monogram */}
+      <DarkroomHero />
 
-      {/* 2. INFINITE HAIRLINE KINETIC MARQUEE */}
-      <MarqueeStream />
+      {/* 2. SELECTED WORK: Flagship Case Studies with Develop Reveal & Metrics */}
+      <SelectedWork />
 
-      {/* 3. EDITORIAL MANIFESTO, ENGINEERING DOSSIER & CHRONOLOGICAL TRAJECTORY */}
-      <EditorialManifesto />
+      {/* 3. WORK WITH ME: 4 Structured Engagement Models */}
+      <WorkWithMe />
 
-      {/* 4. PHILOSOPHICAL THESIS / SCRUB REVEAL */}
-      <Thesis />
+      {/* 4. STACK MATRIX: Confident Tiering & Bidirectional Cross-Highlighting */}
+      <StackMatrix />
 
-      {/* 5. ARCHITECTURAL DOMAIN SHOWCASE (ZERO PILL BADGES) */}
-      <HorizontalDomainDeck />
+      {/* 5. WRITING: Latest Deep Dives on Systems & Security */}
+      <WritingTeaser />
 
-      {/* 6. SELECTED WORKS EXHIBITION & KINETIC TILT PERSPECTIVE */}
-      <KineticProjectExhibition />
-
-      {/* 7. DIRECT CHANNELS & EDITORIAL FOOTER */}
-      <ContactCTA />
+      {/* 6. CLOSING CTA: "Let's develop something." + Click-to-Copy Email */}
+      <ClosingCTA />
     </div>
   );
 }

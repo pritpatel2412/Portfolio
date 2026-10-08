@@ -1,34 +1,103 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
-const METRICS = [
-  { value: '400+', label: 'LeetCode Problems Solved', note: 'Data structures & algorithmic graph theory' },
-  { value: '9.67', label: 'Undergraduate GPA', note: 'Computer Science & Engineering' },
-  { value: '4.2x', label: 'Scan Concurrency Speedup', note: 'RedForge distributed security engine' },
-  { value: '< 240ms', label: 'P95 Extraction Latency', note: 'SearchMind real-time agent RAG pipeline' },
+export interface StatTileProps {
+  value: string;
+  label: string;
+  evidenceLabel: string;
+  href: string;
+  external?: boolean;
+}
+
+const STATS: StatTileProps[] = [
+  {
+    value: '400+',
+    label: 'Algorithmic Problems Solved',
+    evidenceLabel: 'LeetCode Profile',
+    href: 'https://leetcode.com/u/prit__2412/',
+    external: true,
+  },
+  {
+    value: '9.67',
+    label: 'Cumulative CS GPA',
+    evidenceLabel: 'Academic Record',
+    href: '/resume',
+    external: false,
+  },
+  {
+    value: 'Sub-80ms',
+    label: 'RAG Grounding & Search Latency',
+    evidenceLabel: 'SearchMind API Spec',
+    href: '/projects/searchmind',
+    external: false,
+  },
 ];
 
-export function ProofStrip() {
+export function ProofStrip({ className }: { className?: string }) {
   return (
-    <section className="py-16 md:py-24 border-t border-[var(--line)]">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-12">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-          {METRICS.map((m, i) => (
-            <div key={i} className="flex flex-col gap-2">
-              <span className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold text-[var(--ink)] font-mono tracking-tight">
-                {m.value}
+    <div
+      aria-label="Verified Engineering Proof Points"
+      className={cn(
+        'w-full grid grid-cols-1 md:grid-cols-3 border-t border-b border-[var(--line)] bg-[var(--surface)]',
+        className
+      )}
+    >
+      {STATS.map((stat, idx) => {
+        const Content = (
+          <div className="group p-6 sm:p-8 flex flex-col justify-between h-full transition-colors duration-200 hover:bg-[var(--surface-2)]">
+            <div className="flex items-start justify-between gap-4">
+              <span className="font-display font-black text-3xl sm:text-4xl lg:text-5xl tracking-tight text-[var(--text)] group-hover:text-[var(--safelight)] transition-colors tabular-nums">
+                {stat.value}
               </span>
-              <span className="font-sans font-semibold text-sm md:text-base text-[var(--ink)]">
-                {m.label}
-              </span>
-              <span className="font-mono text-xs text-[var(--ink-muted)] leading-relaxed">
-                {m.note}
+              <span className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-wider text-[var(--text-dim)] group-hover:text-[var(--safelight)] transition-colors border border-[var(--line)] px-2 py-0.5 rounded-[var(--radius-ui)] shrink-0">
+                <span>{stat.evidenceLabel}</span>
+                <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </span>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
+
+            <div className="mt-4 pt-3 border-t border-[var(--line)] flex items-center justify-between">
+              <p className="font-mono text-xs uppercase tracking-wider text-[var(--text-dim)] group-hover:text-[var(--text)] transition-colors">
+                {stat.label}
+              </p>
+              <span className="font-mono text-[10px] text-[var(--text-dim)]">
+                ▷ 0{idx + 1}
+              </span>
+            </div>
+          </div>
+        );
+
+        return stat.external ? (
+          <a
+            key={stat.href}
+            href={stat.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              'block focus-visible:outline-2 focus-visible:outline-[var(--safelight)] focus-visible:outline-offset-[-2px]',
+              idx !== 0 && 'md:border-l md:border-[var(--line)]',
+              idx !== 0 && 'border-t md:border-t-0 border-[var(--line)]'
+            )}
+          >
+            {Content}
+          </a>
+        ) : (
+          <Link
+            key={stat.href}
+            href={stat.href}
+            className={cn(
+              'block focus-visible:outline-2 focus-visible:outline-[var(--safelight)] focus-visible:outline-offset-[-2px]',
+              idx !== 0 && 'md:border-l md:border-[var(--line)]',
+              idx !== 0 && 'border-t md:border-t-0 border-[var(--line)]'
+            )}
+          >
+            {Content}
+          </Link>
+        );
+      })}
+    </div>
   );
 }
