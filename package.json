@@ -9,7 +9,9 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "check:contrast": "node scripts/check-contrast.mjs"
+    "check:contrast": "node scripts/check-contrast.mjs",
+    "check:content": "node scripts/check-content.mjs",
+    "test:audit": "node scripts/verify-prompt7-master-audit.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

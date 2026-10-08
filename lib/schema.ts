@@ -21,6 +21,7 @@ export const MetricSchema = z.object({
   label: z.string(),
   value: z.string(),
   note: z.string().optional(),
+  source: z.string().optional(),
 });
 
 export const ProofBlockSchema = z.object({
