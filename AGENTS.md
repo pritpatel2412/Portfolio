@@ -14,7 +14,7 @@ Rebuild this portfolio into an award-calibre site. The single source of truth fo
 8. No persistent overlay on content. The only fixed UI is the header, plus the Picks tray while it has items.
 
 ## Workflow
-- Work on branch `redesign/darkroom`. Small commits, conventional messages.
+- Work on branch `redesign/new`. Small commits, conventional messages.
 - Use Planning mode for any task touching more than 3 files. Produce an implementation plan and wait for my approval before executing.
 - Build and tune every signature moment in /dev/moments before wiring it into a page. Record a short clip of each in the walkthrough artifact.
 - After every task, verify with the browser agent at 375, 768, 1280 and 1728 px, in light and dark, with reduced motion on and off. Attach screenshots to the walkthrough artifact.
